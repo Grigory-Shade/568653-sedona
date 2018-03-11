@@ -7,10 +7,10 @@
 </head>
 
 <body>
-    <!--   <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>-->
+   
     <header class="main-header">
         <nav class="main-navigation">
-            <a class="logo"> <img src="img/logo.png" width="138" height="70" alt="Логотип Sedona"> </a>
+            <a class="logo"> <img src="img/logo.png" width="138" height="70" alt="Логотип города Sedona"> </a>
             <ul class="main-menu">
                 <li><a href="#">Информация</a></li>
                 <li><a href="#">Фото и видео</a></li>
@@ -34,7 +34,7 @@
                     <h3>Настоящий городок</h3>
                     <p>— №1 —</p>
                     <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p> 
-                    <img src="img/main/town.jpg" width="800" height="400" alt="Фото городка">
+                    <img src="img/main/town.jpg" width="800" height="400" alt="Небольшой провинциальный городок с двухэтажными зданиями">
                     <ul class="advantages-town">
                         <li class="advantages-town-item">
                             <h4>Жилье</h4>
@@ -51,7 +51,7 @@
                     </ul>
                 </li>
                 <li class="advantage-item"> 
-                    <img src="img/main/devil's_bridge.jpg" width="800" height="400" alt="Фото моста дьявола">
+                    <img src="img/main/devil's_bridge.jpg" width="800" height="400" alt="Узкий природный мост из камня между двумя скалами, недалеко от городка Седона">
                     <h3>Там есть мост дьявола</h3>
                     <p>— №2 —</p>
                     <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -77,9 +77,42 @@
             <h2 class="visually-hidden">Форма поиска и карта отелей</h2>
             <p><b>Заинтересовались?</b></p>
             <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-            <!--форма поиска и карта-->
-            <img src="img/main/map.jpg" width="1200" height="593" alt="Карта городка Седона">
-        </section>
+            <h3>Поиск гостиницы в Седоне</h3>
+            <form class="search-hotel" action="https://echo.htmlacademy.ru" method="post">
+                <div class="hotel-arrival">
+                    <p>
+                        <label for="hotel-arrival">Дата заезда:</label>
+                        <input type="date" name="arrival" id="hotel-arrival">
+                        <button type="button" aria-label="выбор даты из календаря">иконка календаря</button>
+                    </p>
+                </div>
+                <div class="hotel-departure">
+                    <p>
+                        <label for="hotel-departure">Дата выезда:</label>
+                        <input type="date" name="departure" id="hotel-departure">
+                        <button type="button" aria-label="выбор даты из календаря">иконка календаря</button>
+                    </p>
+                </div>
+                <div class="adult-field">
+                    <p>
+                        <label for="hotel-adult">Взрослые:</label>
+                        <button class="minus" type="button">-</button>
+                        <input type="number" name="adult" id="hotel-adult" value="1" min="1">
+                        <button class="plus" type="button">+</button>
+                    </p>
+                </div>
+                <div class="child-field">
+                    <p>
+                        <label for="hotel-child">Дети:</label>
+                        <button class="minus" type="button">-</button>
+                        <input type="number" name="child" id="hotel-child" value="0" min="0">
+                        <button class="plus" type="button">+</button>
+                    </p>
+                </div>
+                <button type="submit">Найти</button>
+            </form> 
+            <img src="img/main/map.jpg" width="1200" height="593" alt="Карта. Городок Седона расположен по обе стороны границы между округами Коконино и Явапай в северной области Долины Верде штата Аризона."> 
+            </section>
     </main>
     <footer class="main-footer">
         <section>
@@ -89,14 +122,14 @@
         <section>
             <h3 class="visually-hidden">Социальные сети</h3>
             <ul>
-                <li><a class="social-button" href="#">Твиттер</a></li>
-                <li><a class="social-button" href="#">Фейсбук</a></li>
-                <li><a class="social-button" href="#">Ютуб</a></li>
+                <li><a class="social-button" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+                <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+                <li><a class="social-button" href="#"><span class="visually-hidden">Ютуб</span></a></li>
             </ul>
         </section>
         <section>
             <h3 class="visually-hidden">Разработка сайта</h3>
-            <p>Website by</p> <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a> 
+            <p>Website by</p> <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 
         </section>
     </footer>
 </body>
