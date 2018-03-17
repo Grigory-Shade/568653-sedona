@@ -9,6 +9,7 @@
     <link href="css/style.css" rel="stylesheet"> </head>
 
 <body>
+   <div class="main-container">
     <header class="main-header">
         <nav class="main-navigation">
             <a class="logo"> <img src="img/logo.png" width="138" height="70" alt="Логотип города Sedona"> </a>
@@ -20,19 +21,20 @@
             </ul>
         </nav>
     </header>
-    <main class="container">
+    <main>
         <h1 class="visually-hidden">Городок Sedona</h1>
-        <div class="main-banner"> </div>
         <section class="advantages">
             <h2 class="visually-hidden">Преимущества</h2>
-            <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+            <p>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
             <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
             <ul class="advantages-list">
-                <li class="advantage-item">
-                    <div class="advantage-row">
-                        <h3>Настоящий городок</h3>
-                        <p>— №1 —</p>
-                        <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p> <img src="img/main/town.jpg" width="800" height="256" alt="Небольшой провинциальный городок с двухэтажными зданиями"> </div>
+                <li class="advantage-item">                 
+                    <div class="advantage-description">
+                      <h3>Настоящий городок</h3>
+                      <p>— №1 —</p>
+                      <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p> 
+                    </div>
+                    <img src="img/main/town.jpg" width="800" height="256" alt="Небольшой провинциальный городок с двухэтажными зданиями">
                     <ul class="advantages-town">
                         <li class="advantages-town-item residence">
                             <h4>Жилье</h4>
@@ -48,29 +50,36 @@
                         </li>
                     </ul>
                 </li>
-                <li class="advantage-item">
-                    <div class="advantage-row"> <img src="img/main/devil's_bridge.jpg" width="800" height="256" alt="Узкий природный мост из камня между двумя скалами, недалеко от городка Седона">
+               <li class="advantage-item">
+                    <img src="img/main/devil's_bridge.jpg" width="800" height="256" alt="Узкий природный мост из камня между двумя скалами, недалеко от городка Седона">
+                    <div class="advantage-description">
                         <h3>Там есть мост дьявола</h3>
                         <p>— №2 —</p>
                         <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                     </div>
                 </li>
                 <li class="advantage-item">
-                    <h3>Небольшая площадь</h3>
-                    <p>— №3 —</p>
-                    <p>Все достопримечательности находятся очень близко</p>
+                    <div class="advantage-description">
+                      <h3>Небольшая площадь</h3>
+                      <p>— №3 —</p>
+                      <p>Все достопримечательности находятся очень близко</p>
+                    </div>
                 </li>
                 <li class="advantage-item">
-                    <h3>Красивая дорога</h3>
-                    <p>— №4 —</p>
-                    <p>Ехать в Седону из Лас-вегаса совсем не скучно!</p>
+                    <div class="advantage-description">
+                      <h3>Красивая дорога</h3>
+                      <p>— №4 —</p>
+                      <p>Ехать в Седону из Лас-вегаса совсем не скучно!</p>
+                    </div>
                 </li>
                 <li class="advantage-item">
-                    <h3>Мало туристов</h3>
-                    <p>— №5 —</p>
-                    <p>Большинство едет в гранд каньон и толпится там</p>
+                    <div class="advantage-description">
+                      <h3>Мало туристов</h3>
+                      <p>— №5 —</p>
+                      <p>Большинство едет в гранд каньон и толпится там</p>
+                    </div>
                 </li>
-            </ul>
+           </ul>
         </section>
         <section class="search">
             <h2 class="visually-hidden">Форма поиска и карта отелей</h2>
@@ -83,7 +92,7 @@
             <form class="search-hotel" action="https://echo.htmlacademy.ru" method="post">
                 <div class="hotel-arrival">
                     <label for="hotel-arrival">Дата заезда:</label>
-                    <input type="date" name="arrival" id="hotel-arrival">
+                    <input type="text" name="arrival" id="hotel-arrival" value="24 апреля 2017">
                     <button class="button calendar-search" type="button" aria-label="выбор даты заезда из календаря">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
                             <g>
@@ -108,7 +117,7 @@
                 </div>
                 <div class="hotel-departure">
                     <label for="hotel-departure">Дата выезда:</label>
-                    <input type="date" name="departure" id="hotel-departure">
+                    <input type="text" name="departure" id="hotel-departure" value="4 июля 2017">
                     <button class="button calendar-search" type="button" aria-label="выбор даты выезда из календаря">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
                             <g>
@@ -137,7 +146,7 @@
                         <svg width="12" height="12">
                             <line x1="0" y1="50%" x2="12" y2="50%" stroke="#000000" stroke-width="3" /> </svg>
                     </button>
-                    <input type="number" name="adult" id="hotel-adult" value="1" min="1">
+                    <input type="text" name="adult" id="hotel-adult" value="2">
                     <button class="button plus" type="button" aria-label="Увеличить количество взрослых">
                         <svg width="12" height="12">
                             <line x1="0" y1="50%" x2="12" y2="50%" stroke="#000000" stroke-width="3" />
@@ -150,7 +159,7 @@
                         <svg width="12" height="12">
                             <line x1="0" y1="50%" x2="12" y2="50%" stroke="#000000" stroke-width="3" /> </svg>
                     </button>
-                    <input type="number" name="child" id="hotel-child" value="0" min="0">
+                    <input type="text" name="child" id="hotel-child" value="0">
                     <button class="button plus" type="button" aria-label="Увеличить количество детей">
                         <svg width="12" height="12">
                             <line x1="0" y1="50%" x2="12" y2="50%" stroke="#000000" stroke-width="3" />
@@ -158,7 +167,8 @@
                     </button>
                 </div>
                 <button class="button button-search" type="submit">Найти</button>
-            </form> <img class="map" src="img/main/map.jpg" width="1200" height="593" alt="Карта. Городок Седона расположен по обе стороны границы между округами Коконино и Явапай в северной области Долины Верде штата Аризона."> </section>
+            </form> <img class="map" src="img/main/map.jpg" width="1200" height="593" alt="Карта. Городок Седона расположен по обе стороны границы между округами Коконино и Явапай в северной области Долины Верде штата Аризона."> 
+            </section>
     </main>
     <footer class="main-footer">
         <section class="hashtag">
@@ -225,6 +235,7 @@
             </a> 
         </section>
     </footer>
+   </div>
 </body>
 
 </html>

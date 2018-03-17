@@ -10,18 +10,19 @@
 </head>
 
 <body>
-    <header class="main-header">
+   <div class="main-container">
+    <header>
         <nav class="main-navigation">
             <a class="logo" href="index.html"> <img src="img/logo.png" width="138" height="70" alt="Логотип города Sedona"> </a>
             <ul class="main-menu">
-                <li><a href="/index.html">Информация</a></li>
+                <li><a href="index.html">Информация</a></li>
                 <li><a href="#">Фото и видео</a></li>
                 <li><a href="#">Карта штата</a></li>
                 <li class="active">Гостиницы</li>
             </ul>
         </nav>
     </header>
-    <main class="container">
+    <main>
         <h1 class="visually-hidden">Гостиницы города</h1>
         <section class="filters">
             <h2 class="visually-hidden">Фильтр подбора жилья</h2>
@@ -66,6 +67,7 @@
                         </li>
                     </ul>
                 </fieldset>
+                <div class="form-wrapper">
                 <fieldset>
                     <legend>Стоимость в сутки (Р):</legend>
                     <div class="output-cost">
@@ -79,55 +81,79 @@
                         <input type="range" min="0" max="4000" name="max-cost" id="max-cost"> </div>
                 </fieldset>
                 <button class="button filter-hotel-show" type="submit">Показать</button>
+                </div>
             </form>
         </section>
         <section class="catalog-hotels">
             <h2 class="visually-hidden">Список отелей</h2>
-            <p>Найдено: 3</p>
-            <h4>Сортировка:</h4>
-            <ul class="sort-list">
-                <li class="sort-item"><a href="#">По цене</a></li>
-                <li class="sort-item"><a href="#">По типу</a></li>
-                <li class="sort-item"><a href="#">По рейтингу</a></li>
-                <li class="sort-item">
-                   <a class="formation" href="#"><span class="visually-hidden">По возрастанию</span>
-                     <svg class="triangle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <div class="sort-wrapper">
+              <p>Найдено: 3</p>
+              <h4>Сортировка:</h4>
+              <ul class="sort-list">
+                  <li class="sort-item"><a href="#">По цене</a></li>
+                  <li class="sort-item"><a href="#">По типу</a></li>
+                  <li class="sort-item"><a href="#">По рейтингу</a></li>
+                  <li class="sort-item">
+                     <a class="formation" href="#"><span class="visually-hidden">По возрастанию</span>
+                       <svg class="triangle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                 width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
                        <polygon fill="#cbcbcb" points="5.5,0 0,10 11,10 "/>
-                     </svg>
-                   </a>
-                </li>
-                <li class="sort-item">
-                   <a class="formation" href="#"><span class="visually-hidden">По убыванию</span>
-                     <svg class="triangle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       </svg>
+                     </a>
+                  </li>
+                  <li class="sort-item">
+                     <a class="formation" href="#"><span class="visually-hidden">По убыванию</span>
+                       <svg class="triangle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                 width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
-                       <polyline fill="#cbcbcb" points="5.5,10 0,0 11,0 "/>
-                     </svg>
-                   </a>
-                </li>
-            </ul>
+                         <polyline fill="#cbcbcb" points="5.5,10 0,0 11,0 "/>
+                       </svg>
+                     </a>
+                  </li>
+              </ul>
+            </div>
             <ul class="hotels-list">
                 <li class="hotels-item">
                     <a href="#"><img src="img/hotels/amara_resort.jpg" width="135" height="90" alt="Amara Resort & Spa: Отель в городе Седоне с прекрасным видом на Красные скалы расположен у реки Оак-Крик"></a>
-                    <h4><a class="hotels-item-title" href="#">Amara Resort & Spa</a></h4>
-                    <p class="hotels-item-type">Гостиница</p>
-                    <p class="hotels-item-price">От 4000 р.</p> 
-                    <div class="stars star-4"></div>
-                    <p class="hotels-item-rating">Рейтинг: 8,5</p> <a class="button" href="#">Подробнее</a> <a class="button reserve" href="#">Забронировать</a> </li>
+                    <div class="hotels-item-main">
+                      <h4><a class="hotels-item-title" href="#">Amara Resort & Spa</a></h4>
+                      <p class="hotels-item-type">Гостиница</p>
+                      <p class="hotels-item-price">От 4000 р.</p> 
+                      <a class="button" href="#">Подробнее</a> 
+                      <a class="button reserve" href="#">Забронировать</a>
+                    </div>
+                    <div class="hotels-item-grade">
+                      <div class="stars star-4"></div>
+                      <p class="hotels-item-rating">Рейтинг: 8,5</p> 
+                    </div> 
+                </li>
                 <li class="hotels-item">
                     <a href="#"><img src="img/hotels/desert_quail_inn.jpg" width="135" height="90" alt="Desert Quail Inn: Небольшой двухэтажный мотель, расположен в деревне Оук-Крик у дороги, в 15 минутах езды от центра города Седона."></a>
-                    <h4><a class="hotels-item-title" href="#">Desert Quail Inn</a></h4>
-                    <p class="hotels-item-type">Мотель</p>
-                    <p class="hotels-item-price">От 3000 р.</p> 
-                    <div class="stars star-3"></div>
-                    <p class="hotels-item-rating">Рейтинг: 8,9</p> <a class="button " href="#">Подробнее</a> <a class="button reserve" href="#">Забронировать</a> </li>
+                    <div class="hotels-item-main">
+                      <h4><a class="hotels-item-title" href="#">Desert Quail Inn</a></h4>
+                      <p class="hotels-item-type">Мотель</p>
+                      <p class="hotels-item-price">От 3000 р.</p> 
+                      <a class="button " href="#">Подробнее</a> 
+                      <a class="button reserve" href="#">Забронировать</a>
+                    </div> 
+                    <div class="hotels-item-grade">
+                      <div class="stars star-3"></div>
+                      <p class="hotels-item-rating">Рейтинг: 8,9</p> 
+                    </div>
+                </li>
                 <li class="hotels-item">
                     <a href="#"><img src="img/hotels/villas_at_poco_diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo: отель,утопающий в зелени,расположен в городе Седона, штат Аризона, менее чем в 10 минутах езды от Кафедральной горы"></a>
-                    <h4><a class="hotels-item-title" href="#">Villas at Poco Diablo</a></h4>
-                    <p class="hotels-item-type">Апартаменты</p>
-                    <p class="hotels-item-price">От 2000 р.</p> 
-                    <div class="stars star-2"></div>
-                    <p class="hotels-item-rating">Рейтинг: 9,2</p> <a class="button" href="#">Подробнее</a> <a class="button reserve" href="#">Забронировать</a> </li>
+                    <div class="hotels-item-main">
+                      <h4><a class="hotels-item-title" href="#">Villas at Poco Diablo</a></h4>
+                      <p class="hotels-item-type">Апартаменты</p>
+                      <p class="hotels-item-price">От 2000 р.</p> 
+                      <a class="button" href="#">Подробнее</a> 
+                      <a class="button reserve" href="#">Забронировать</a>
+                    </div> 
+                    <div class="hotels-item-grade">
+                        <div class="stars star-2"></div>
+                      <p class="hotels-item-rating">Рейтинг: 9,2</p> 
+                    </div>
+                </li>
             </ul>
         </section>
     </main>
@@ -196,6 +222,7 @@
             </a> 
         </section>
     </footer>
+  </div>
 </body>
 
 </html>
