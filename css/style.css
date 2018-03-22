@@ -45,24 +45,25 @@ a {
     padding: 0 73px;
     font-weight: bold;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .main-menu li {
     padding: 15px 0;
-    width: 240px;   
+    width: 240px; 
 }
 
-.main-menu li:first-child,
-.main-menu li:nth-child(2) {
+.main-menu li:nth-child(4n+1),
+.main-menu li:nth-child(4n+2) {
     text-align: left;   
 }
 
-.main-menu li:nth-child(2) {
+.main-menu li:nth-child(4n+2) {
     margin-right: auto;   
 }
 
-.main-menu li:nth-last-child(2),
-.main-menu li:last-child {
+.main-menu li:nth-child(4n+3),
+.main-menu li:nth-child(4n+4) {
     text-align: right;   
 }
 
@@ -115,6 +116,7 @@ a {
     display: flex;
     width: 400px;
     align-items: center;
+    flex-grow: 1;
     flex-wrap: wrap;
     line-height: 21px;
     background-color: #efefef;
@@ -126,6 +128,7 @@ a {
 }
 
 .advantage-description {
+    margin: 0 auto;
     width: 400px;   
 }
 
@@ -140,13 +143,15 @@ a {
     background-color: #e9ae98;
 }
 
-.advantages-list li:nth-last-child(n+4) {
+.advantages-list .advantage-item:first-child,
+.advantages-list .advantage-item:nth-child(2) {
     color: #ffffff;
     background-color: #82b4d3;
 }
 
 .advantages-town {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -155,6 +160,7 @@ a {
 }
 
 .advantages-town-item {
+    flex-grow: 1;
     width: 400px;
 }
 
@@ -233,6 +239,32 @@ input[type="text"]:focus {
     border: 2px solid #e6e6e6;
     background-color: #ffffff;
     outline: none;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+    color: #000000;
+}
+input[type="text"]:-moz-placeholder {
+    color: #000000;
+}
+input[type="text"]::-moz-placeholder {
+    color: #000000;
+}
+input[type="text"]:-ms-input-placeholder {
+    color: #000000;
+}
+
+input[type="text"]:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+input[type="text"]:focus:-moz-placeholder {
+    opacity: 0;
+}
+input[type="text"]:focus::-moz-placeholder {
+    opacity: 0;
+}
+input[type="text"]:focus:-ms-input-placeholder {
+    opacity: 0;
 }
 
 .calendar-search {
@@ -315,10 +347,9 @@ input[type="text"]:focus {
 
 .main-footer {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 36px 101px 36px 132px;
-}
-    
 }
 
 .hashtag {
@@ -339,6 +370,7 @@ input[type="text"]:focus {
 
 .social ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
     margin: 0;
@@ -351,6 +383,10 @@ input[type="text"]:focus {
     width: 46px;
     height: 48px;
     background-color: #82b5d3;
+}
+
+.social li:nth-of-type(n+4) {
+    margin-top: 6px;   
 }
 
 .social .twitter:hover {
@@ -391,6 +427,7 @@ input[type="text"]:focus {
 
 .developers {
     display: flex; 
+    flex-wrap: wrap;
     align-items: center;
     width: 197px;
     margin-left: auto;
@@ -435,7 +472,8 @@ input[type="text"]:focus {
 }
 
 .filter-hotel {
-    display: flex;   
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .filter-hotel > fieldset {
@@ -542,6 +580,7 @@ input[type="range"]::-ms-thumb {
 
 .sort-wrapper {
     display: flex; 
+    flex-wrap: wrap;
     padding: 0 72px;
     align-items: baseline;
     margin: 30px 0;
@@ -568,6 +607,7 @@ input[type="range"]::-ms-thumb {
 .sort-list {
     width: 773px;
     display: flex; 
+    flex-wrap: wrap;
 }
 
 .sort-item {
@@ -615,6 +655,7 @@ input[type="range"]::-ms-thumb {
 .hotels-item {
     display: flex; 
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: 30px 72px 28px 72px; 
     border-bottom: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
@@ -688,7 +729,18 @@ p.hotels-item-price {
     background-color: #5496bd;
 }
 
+.hotels-list .more {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 110px;
+}
+
 .hotels-list .reserve {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 143px;
     background-color: #766357;
     margin-left: 3px;
 }
@@ -710,6 +762,7 @@ p.hotels-item-price {
 
 .stars {
     display: inline-block;
+    vertical-align: middle;
     margin-bottom: 38px;
     width: 18px;
     height: 18px;
