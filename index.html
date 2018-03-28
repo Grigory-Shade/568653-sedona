@@ -6,7 +6,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet"> </head>
+    <link href="css/style.min.css" rel="stylesheet"> </head>
 
 <body>
    <div class="main-container">
@@ -85,14 +85,14 @@
             <h2 class="visually-hidden">Форма поиска и карта отелей</h2>
             <div class="search-description">
                 <p>Заинтересовались?</p>
-                <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+                <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             </div>
             <h3><button class="button title-search" type="button">
                 Поиск гостиницы в Седоне</button></h3>
             <form class="search-hotel" action="https://echo.htmlacademy.ru" method="post">
                 <div class="hotel-arrival">
                     <label for="hotel-arrival">Дата заезда:</label>
-                    <input type="text" name="arrival" id="hotel-arrival" placeholder="24 апреля 2017">
+                    <input type="text" name="arrival" id="hotel-arrival" placeholder="24 АПРЕЛЯ 2017">
                     <button class="button calendar-search" type="button" aria-label="выбор даты заезда из календаря">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
                             <g>
@@ -117,7 +117,7 @@
                 </div>
                 <div class="hotel-departure">
                     <label for="hotel-departure">Дата выезда:</label>
-                    <input type="text" name="departure" id="hotel-departure" placeholder="4 июля 2017">
+                    <input type="text" name="departure" id="hotel-departure" placeholder="4 ИЮЛЯ 2017">
                     <button class="button calendar-search" type="button" aria-label="выбор даты выезда из календаря">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
                             <g>
@@ -146,7 +146,7 @@
                         <svg width="12" height="12">
                             <line x1="0" y1="50%" x2="12" y2="50%" stroke="#000000" stroke-width="3" /> </svg>
                     </button>
-                    <input type="text" name="adult" id="hotel-adult" value="2">
+                    <input type="text" name="adult" id="hotel-adult" placeholder="2">
                     <button class="button plus" type="button" aria-label="Увеличить количество взрослых">
                         <svg width="12" height="12">
                             <line x1="0" y1="50%" x2="12" y2="50%" stroke="#000000" stroke-width="3" />
@@ -159,7 +159,7 @@
                         <svg width="12" height="12">
                             <line x1="0" y1="50%" x2="12" y2="50%" stroke="#000000" stroke-width="3" /> </svg>
                     </button>
-                    <input type="text" name="child" id="hotel-child" value="0">
+                    <input type="text" name="child" id="hotel-child" placeholder="0">
                     <button class="button plus" type="button" aria-label="Увеличить количество детей">
                         <svg width="12" height="12">
                             <line x1="0" y1="50%" x2="12" y2="50%" stroke="#000000" stroke-width="3" />
@@ -172,11 +172,11 @@
             </section>
     </main>
     <footer class="main-footer index-footer">
-        <section class="hashtag">
+        <div class="hashtag">
             <h3 class="visually-hidden">Хэштег города</h3>
             <p>#visitsedona</p>
-        </section>
-        <section class="social">
+        </div>
+        <div class="social">
             <h3 class="visually-hidden">Социальные сети</h3>
             <ul>
                 <li>
@@ -214,8 +214,8 @@
                     </a>
                 </li>
             </ul>
-        </section>
-        <section class="developers">
+        </div>
+        <div class="developers">
             <h3 class="visually-hidden">Разработка сайта</h3>
             <p>Website by</p>
             <a class="developers-icon" href="https://htmlacademy.ru/intensive/htmlcs"><span class="visually-hidden">HTML Academy</span>
@@ -234,7 +234,7 @@
                     <path d="M370.53,323.31l-0.16,0-15.28,1.6v28L370.37,362l15.28-9.09v-28Zm13.12,28.45-13.28,7.9-13.28-7.9V340.28l13.22,7.87,0,1.43-9.07-5.4v1.38l9.11,5.47,0,1.46-9.1-5.42v1.38l9.11,5.47h0l9.19-5.5v-1.39h0v-4.52l4.1-2.45v11.67Zm0-13.16L380,340.74h0l-1.68,1-8-4.76v1.38l6.84,4.07-0.06,0-0.15.09-1,.57-5.64-3.36v1.38l4.45,2.65-1.05.7,0,0-3.36-2v1.38l2.21,1.3-2.25,1.35-13.16-7.82,13.17-7.92h0Zm0-1.39-13.35-7.87h0l-13.2,7.86v-10.5l13.28-1.39,13.28,1.39v10.51Z" transform="translate(-355.09 -323.29)" fill="#fff"/>
                 </svg>
             </a> 
-        </section>
+        </div>
     </footer>
    </div>
 </body>

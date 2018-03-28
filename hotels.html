@@ -6,7 +6,7 @@
     <title>Отели Седоны</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="type-of-housing">
                     <legend> Тип жилья: </legend>
                     <ul>
                         <li>
@@ -67,20 +67,20 @@
                         </li>
                     </ul>
                 </fieldset>
-                <div class="form-wrapper">
-                <fieldset>
-                    <legend>Стоимость в сутки (Р):</legend>
-                    <div class="output-cost">
-                        <output for="min-cost">от 0</output>
-                        <output for="max-cost">до 3000</output>
-                    </div>
-                    <div class="input-cost">
-                        <label class="visually-hidden" for="min-cost">Цена от:</label>
-                        <input type="range" min="0" max="4000" name="min-cost" id="min-cost">
-                        <label class="visually-hidden" for="max-cost">Цена до:</label>
-                        <input type="range" min="0" max="4000" name="max-cost" id="max-cost"> </div>
-                </fieldset>
-                <button class="button filter-hotel-show" type="submit">Показать</button>
+                 <div class="filter-range">
+                      <div class="filter-range-title">Стоимость в сутки (р):</div>
+                      <div class="price-controls">
+                            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+                      </div>
+                   <div class="range-controls">
+                        <div class="scale">
+                          <div class="bar"></div>
+                        </div>
+                        <div class="range-toggle range-toggle-min"></div>
+                        <div class="range-toggle range-toggle-max"></div>
+                  </div>
+                  <button class="btn-transparent" type="submit">Показать</button>
                 </div>
             </form>
         </section>
@@ -90,7 +90,7 @@
               <p>Найдено: 3</p>
               <h4>Сортировка:</h4>
               <ul class="sort-list">
-                  <li class="sort-item"><a href="#">По цене</a></li>
+                  <li class="sort-item current">По цене</li>
                   <li class="sort-item"><a href="#">По типу</a></li>
                   <li class="sort-item"><a href="#">По рейтингу</a></li>
                   <li class="sort-item">
@@ -100,12 +100,12 @@
                        <polygon fill="#cbcbcb" points="5.5,0 0,10 11,10 "/>
                        </svg>
                      </a>
-                     <a class="formation" href="#"><span class="visually-hidden">По убыванию</span>
-                       <svg class="triangle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     <span class="formation"><span class="visually-hidden">По убыванию</span>
+                       <svg class="current" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                 width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
                          <polyline fill="#cbcbcb" points="5.5,10 0,0 11,0 "/>
                        </svg>
-                     </a>
+                     </span>
                   </li>
               </ul>
             </div>
@@ -156,11 +156,11 @@
         </section>
     </main>
     <footer class="main-footer">
-        <section class="hashtag">
+        <div class="hashtag">
             <h3 class="visually-hidden">Хэштег города</h3>
             <p>#visitsedona</p>
-        </section>
-        <section class="social">
+        </div>
+        <div class="social">
             <h3 class="visually-hidden">Социальные сети</h3>
             <ul>
                 <li>
@@ -198,8 +198,8 @@
                     </a>
                 </li>
             </ul>
-        </section>
-        <section class="developers">
+        </div>
+        <div class="developers">
             <h3 class="visually-hidden">Разработка сайта</h3>
             <p>Website by</p> 
             <a class="developers-icon" href="https://htmlacademy.ru/intensive/htmlcs"><span class="visually-hidden">HTML Academy</span>
@@ -218,7 +218,7 @@
                     <path d="M370.53,323.31l-0.16,0-15.28,1.6v28L370.37,362l15.28-9.09v-28Zm13.12,28.45-13.28,7.9-13.28-7.9V340.28l13.22,7.87,0,1.43-9.07-5.4v1.38l9.11,5.47,0,1.46-9.1-5.42v1.38l9.11,5.47h0l9.19-5.5v-1.39h0v-4.52l4.1-2.45v11.67Zm0-13.16L380,340.74h0l-1.68,1-8-4.76v1.38l6.84,4.07-0.06,0-0.15.09-1,.57-5.64-3.36v1.38l4.45,2.65-1.05.7,0,0-3.36-2v1.38l2.21,1.3-2.25,1.35-13.16-7.82,13.17-7.92h0Zm0-1.39-13.35-7.87h0l-13.2,7.86v-10.5l13.28-1.39,13.28,1.39v10.51Z" transform="translate(-355.09 -323.29)" fill="#fff"/>
                 </svg>
             </a> 
-        </section>
+        </div>
     </footer>
   </div>
 </body>
