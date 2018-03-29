@@ -109,7 +109,9 @@ a {
 }
 
 .advantages > p:first-of-type {
+    margin: 0 auto;
     margin-bottom: 27px;
+    width: 440px;
     font-size: 21px;
     font-weight: bold;
 }
